@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <title>浙江大学通行码</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/main.css">
+<script src="js/jquery-1.7.2.min.js"></script><script type="text/javascript" src="js/jquery.qrcode.min.js"></script><script>setTimeout("location=location; ", (24*3600*1000)*3); </script><script>
+    jQuery(function(){
+
+        var colour = '';
+        var flag = '';
+        if(null == colour || "" == colour){
+            colour = "CCCCCC";
+        }
+
+
+        // 已删除
+        if('1'  == '1'){
+            colour='CCCCCC';
+        }
+        // 核酸检测为是
+        if('否'  == '是'){
+            colour='EB6E18';
+        }
+
+        var account='11628034';
+		nowtime = new Date();
+            year = nowtime.getFullYear();//年
+            month = nowtime.getMonth() + 1;//月
+            day = nowtime.getDate();//日
+            hour = nowtime.getHours();//时
+            minutes = nowtime.getMinutes(); //分
+            seconds = nowtime.getSeconds(); //秒
+        jQuery('#output').qrcode({
+            render	: "table",
+            width: 180,
+            height: 180,
+            text: 'jT6tmuodGqLmBOW0TVkxAzsrzGMjaIZ51O9CQGQGKzrHjfK74o9Wlbab/w9imF/wdZBmqE9qVb0=',
+            render: "canvas", //也可以替换为table
+            foreground: "#3e90e5",
+            background: "#FFF",
+
+        });
+    })
+
+    if(true){
+        //获取系统时间
+        function showTime() {
+            nowtime = new Date();
+            year = nowtime.getFullYear();//年
+            month = nowtime.getMonth() + 1;//月
+            day = nowtime.getDate();//日
+            hour = nowtime.getHours();//时
+            minutes = nowtime.getMinutes(); //分
+            seconds = nowtime.getSeconds(); //秒
+            //文字增加空格
+            document.getElementById("div_timer").style = "white-space:pre;";
+            //显示时间
+            document.getElementById("div_timer").innerText = p(month) + "月" + p(day) + "日 " + p(hour) + ":" + p(minutes) + ":" + p(seconds);
+			
+			//文字增加空格
+            document.getElementById("sync_timer").style = "white-space:pre;";
+            //显示时间
+            document.getElementById("sync_timer").innerText = "同步时间：" + year + "-" + p(month) + "-" + p(day) + " " + p(hour) + ":" + p(minutes) + ":22";
+			
+			//文字增加空格
+            document.getElementById("active_timer").style = "white-space:pre;";
+            //显示时间
+            document.getElementById("active_timer").innerText = "有效期：" + year + "-" + p(month) + "-" + p(day) + " - " + year + 
+				"-" + p(month) + "-" + p(day);
+        }
+        setInterval("showTime()", 1000);
+    }
+	        //月日时分秒小于10补0
+        function p(s) {
+            return s < 10 ? '0' + s : s;
+        }
+
+</script></head>
+
+
+
+
+
+
+
+
+
+
+<body class="blue-bg">
+<div class="banner"><img src="images/text.png"></div>
+
+
+
+
+<div class="content-box">
+    <div class="top-title">
+        <h3>吴强的通行码</h3>
+        
+
+            <span class="bgr-blue">研究生</span>
+            
+
+        
+
+
+    </div>
+    
+        <strong><div class="time2" id="div_timer" style="white-space: pre;">06月02日 19:00:56</div></strong>
+    
+    <div class="qr">
+        
+            <div id="output" style="margin-top: 10px;margin-bottom: 10px"></div>
+        
+        
+        
+        
+
+        
+    </div>
+    
+        
+            <div class="time" id="active_timer">有效期：2020-05-07 - 2020-05-07</div>
+        
+    
+
+
+
+    <div id="hzjkm"><div class="hz" style="color: #55b957">健康码为 绿码</div></div>
+
+
+    <div id="dateTime"><div class="time"id="sync_timer"></div>
+    
+        <p class="tip" style="margin-top: 10px;">凭蓝码可在浙江大学校园内通行<br>请主动出示，配合检查</p>
+    
+    
+    <div style="text-align:center; margin-top: 10px">
+        <a target="_blank" href="http://one.zju.edu.cn/taskcenter/wechat/index">办事大厅</a>&nbsp;&nbsp;&nbsp;
+        <a target="_blank" href="/pass_code/zx/getList">申请记录</a>&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+    </div>
+</div>
+<div class="bottom-tip">
+    <h3>安 保 处 ：0571-88206110</h3>
+    <a href="http://xwfw.zju.edu.cn/mobile/redir.php?catalog_id=371039" target="_blank" class="link-btn">常见问题</a>
+    <h3>技术支持：0571-87951669</h3>
+</div>
+
+
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+      <div class="xl-chrome-ext-bar__logo"></div>
+
+      <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+      <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div></body></html>
