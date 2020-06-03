@@ -22,7 +22,11 @@
         if('否'  == '是'){
             colour='EB6E18';
         }
-
+        function RandomString(length) {
+            var str = '';
+            for ( ; str.length < length; str += Math.random().toString(36).substr(2) );
+            return str.substr(0, length);
+        }
         var account='11212344';
 		nowtime = new Date();
             year = nowtime.getFullYear();//年
@@ -31,11 +35,12 @@
             hour = nowtime.getHours();//时
             minutes = nowtime.getMinutes(); //分
             seconds = nowtime.getSeconds(); //秒
+            tttt=RandomString(76);
         jQuery('#output').qrcode({
             render	: "table",
             width: 180,
             height: 180,
-            text: 'jT6tmuodGqLmBOW0TVkxAzsrzGMjaIZ51O9CQGQGKzrHjfK74o9Wlbab/w9imF/wdZBmqE9qVb0=',
+            text: tttt,
             render: "canvas", //也可以替换为table
             foreground: "#3e90e5",
             background: "#FFF",
